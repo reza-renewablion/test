@@ -1,0 +1,42 @@
+{% load static %} <!-- in this Line, Folder of Static Files will Define! -->
+{% block HeadOfFile %}
+  <!--  Language or Meta tags will Define in this Block!  -->
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+{% endblock HeadOfFile %}
+    {% block title %}
+        <!--  in child page,Child-specific title will be here!  -->
+    {% endblock title %}
+    {%  block cssFiles %}
+        <!--  in child page, Child-specific CSS files will be here!  -->
+    <!--  Bootstrap core CSS  -->
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <!--  Custom styles for this template   -->
+    <link href="{% static 'css/CustomCss.css' %}" rel="stylesheet">
+{% endblock cssFiles %}
+</head>
+{% block StartSectionOfBody %}
+   <!--  This Block is For public Body template section!  -->
+<body>
+<div class="container">
+    <div class="row">
+{% endblock StartSectionOfBody %}
+        {% block containerSize %}
+               <!--  In This Section, Size of Card Box will Define!  -->
+        {% endblock containerSize %}
+            {% block content %}
+             <!--  This Section in Child Page will Define Content of that Page!  -->
+            {% endblock content %}
+{% block EndSectionOfBody %}
+                   <!--  Footer or other Bottom Parts will Define in this Section!  -->
+            </div>
+    </div>
+</div>
+</body>
+</html>
+{% endblock EndSectionOfBody %}

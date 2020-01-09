@@ -1,0 +1,59 @@
+{% extends 'ParentRegisterPage.html' %} <!-- in this Line, Parent of this Page will Define! -->
+{% load static %}
+    {% block title %}
+    <title>BCM Application Sign Up Page</title>
+    {% endblock title %}
+        {% block containerSize %}
+        <div class="col-md-10 mx-auto">
+        {% endblock containerSize %}
+                        {% block content %}
+            <div class="card gradient-border card-signin">
+                <div class="card-body">
+                    <!--  Title Section  -->
+                    <h4 class="card-title text-center"><b>Join BCM Application</b></h4>
+                    <h5 class="card-title text-center">Create An Account</h5>
+                    <!--  Start Sign up Form  -->
+                    <form class="form-signin d-md-inline">
+                        <div class="row">
+                        <div class="col-6">
+                        <div class="form-label-group">
+                            <input type="text" id="inputName" class="form-control" placeholder="Full Name" required autofocus>
+                            <label for="inputName">Full Name</label>
+                        </div>
+                        <div class="form-label-group">
+                            <input type="tel" id="inputMobile" class="form-control" pattern="^\d{4}-\d{3}-\d{4}$" placeholder="Phone Number" required>
+                            <label for="inputMobile">Phone Number (XXXX-XXX-XXXX)</label>
+                        </div>
+                            <div class="form-label-group">
+                                <select class="custom-select mr-sm-2 RoleSelect" id="RoleSelect">
+                                    <option selected>&#45;&#45; Select Role &#45;&#45;</option>
+                                    <option value="Admin">Admin</option>
+                                    <option value="Resident member">Resident member</option>
+                                    <option value="LandLord">LandLord</option>
+                                    <option value="Gatekeeper">Gatekeeper</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                        <div class="form-label-group">
+                            <input type="email" id="inputEmail" class="form-control" placeholder="Email address">
+                            <label for="inputEmail">Email address</label>
+                        </div>
+                        <div class="form-label-group">
+                            <input type="password" id="inputPassword" class="form-control" minlength="8" placeholder="Password" required>
+                            <label for="inputPassword">Password</label>
+                        </div>
+                        <div class="form-label-group">
+                            <input type="text" id="inputPayID" class="form-control" placeholder="Payment ID" required>
+                            <label for="inputPayID">Payment ID</label>
+                        </div>
+
+                            <button class="btn btn-signform btn-lg btn-block btn-signup text-uppercase" type="submit"><i class="fab mr-2"></i> Sign Up</button>
+                            <div class="text-center"><a class="small" href= "{% url 'SignIncontroller' %}">Do you have an Account?Sign in</a></div>
+
+                        </div>
+                        </div></form>
+                    <!--  End of Sign up Form  -->
+                </div>
+            </div>
+            {% endblock content %}
