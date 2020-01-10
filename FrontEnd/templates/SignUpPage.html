@@ -1,4 +1,4 @@
-{% extends 'ParentRegisterPage.html' %} <!-- in this Line, Parent of this Page will Define! -->
+{% extends 'ParentRegisterPage.html' %} {# in this Line, Parent of this Page will Define! #}
 {% load static %}
     {% block title %}
     <title>BCM Application Sign Up Page</title>
@@ -9,23 +9,27 @@
                         {% block content %}
             <div class="card gradient-border card-signin">
                 <div class="card-body">
-                    <!--  Title Section  -->
+                    {# Title Section #}
                     <h4 class="card-title text-center"><b>Join BCM Application</b></h4>
                     <h5 class="card-title text-center">Create An Account</h5>
-                    <!--  Start Sign up Form  -->
-                    <form class="form-signin d-md-inline">
+                    {# Start Sign up Form #}
+                    <form class="form-signin d-md-inline" action="" method="post">
                         <div class="row">
                         <div class="col-6">
                         <div class="form-label-group">
-                            <input type="text" id="inputName" class="form-control" placeholder="Full Name" required autofocus>
-                            <label for="inputName">Full Name</label>
+                            <input type="text" id="id_fullname" class="form-control" name="fullname" placeholder="Full Name" required autofocus>
+                            <label for="id_fullname">Full Name</label>
                         </div>
                         <div class="form-label-group">
-                            <input type="tel" id="inputMobile" class="form-control" pattern="^\d{4}-\d{3}-\d{4}$" placeholder="Phone Number" required>
-                            <label for="inputMobile">Phone Number (XXXX-XXX-XXXX)</label>
+                            <input type="tel" id="id_Mobile" class="form-control" name="mobile" pattern="^\d{4}-\d{3}-\d{4}$" placeholder="Phone Number" required>
+                            <label for="id_Mobile">Phone Number (XXXX-XXX-XXXX)</label>
+                        </div>
+                             <div class="form-label-group">
+                            <input type="text" id="id_iban" class="form-control" name="iban" placeholder="Iban" required>
+                            <label for="id_iban">Iban</label>
                         </div>
                             <div class="form-label-group">
-                                <select class="custom-select mr-sm-2 RoleSelect" id="RoleSelect">
+                                <select class="custom-select mr-sm-2 RoleSelect" name="role" id="id_role">
                                     <option selected>&#45;&#45; Select Role &#45;&#45;</option>
                                     <option value="Admin">Admin</option>
                                     <option value="Resident member">Resident member</option>
@@ -36,24 +40,24 @@
                         </div>
                         <div class="col-6">
                         <div class="form-label-group">
-                            <input type="email" id="inputEmail" class="form-control" placeholder="Email address">
-                            <label for="inputEmail">Email address</label>
+                            <input type="email" id="id_Email" name="email" class="form-control" placeholder="Email address">
+                            <label for="id_Email">Email address</label>
+                        </div>
+                            <div class="form-label-group">
+                            <input type="text" id="id_username" name="username" class="form-control" placeholder="Username" required>
+                            <label for="id_username">Username</label>
                         </div>
                         <div class="form-label-group">
-                            <input type="password" id="inputPassword" class="form-control" minlength="8" placeholder="Password" required>
-                            <label for="inputPassword">Password</label>
-                        </div>
-                        <div class="form-label-group">
-                            <input type="text" id="inputPayID" class="form-control" placeholder="Payment ID" required>
-                            <label for="inputPayID">Payment ID</label>
+                            <input type="password" id="id_Password" name="password" class="form-control" minlength="8" placeholder="Password" required>
+                            <label for="id_Password">Password</label>
                         </div>
 
-                            <button class="btn btn-signform btn-lg btn-block btn-signup text-uppercase" type="submit"><i class="fab mr-2"></i> Sign Up</button>
+                            <input name="register" class="btn btn-signform btn-lg btn-block btn-signup text-uppercase" value="Sign Up" type="submit">
                             <div class="text-center"><a class="small" href= "{% url 'SignIncontroller' %}">Do you have an Account?Sign in</a></div>
 
                         </div>
                         </div></form>
-                    <!--  End of Sign up Form  -->
+                    {# End of Sign up Form  #}
                 </div>
             </div>
             {% endblock content %}
