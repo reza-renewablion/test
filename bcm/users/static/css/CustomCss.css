@@ -1,0 +1,178 @@
+:root {
+    --input-padding-x: .75rem;
+    --input-padding-y: .75rem;
+}
+/* Body style Code */
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+.Remove-text-decoration:hover{
+   text-decoration: none;
+}
+body {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-image: url('../images/BackgroundSignUp.jpg');
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+
+}
+/* End of Body style Code */
+/* Card style Code */
+.card-signin .card-title {
+    margin-bottom: 2rem;
+    font-weight: 300;
+    font-size: 1.5rem;
+}
+
+.card-signin .card-body {
+    padding: 2rem;
+    }
+/* End of Card style Code */
+
+/* Form style Code */
+.form-signin {
+    width: 100%;
+    max-width: 420px;
+}
+
+.form-label-group {
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.form-label-group input {
+    height: auto;
+    border-radius: 2rem;
+}
+
+.form-label-group>input,
+.form-label-group>label {
+    padding: var(--input-padding-y) var(--input-padding-x);
+}
+
+.form-label-group>label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    margin-bottom: 0;
+    /* Override default `<label>` margin */
+    line-height: 1.5;
+    color: #495057;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    transition: all .1s ease-in-out;
+}
+.RoleSelect {
+    line-height: 1.5;
+    border: 1px solid #ced4da;
+    border-radius: 2rem;
+    transition: all .1s ease-in-out;
+    position: relative;
+    min-height: 50px;
+}
+.form-label-group input::-webkit-input-placeholder {
+    color: transparent;
+}
+
+.form-label-group input:-ms-input-placeholder {
+    color: transparent;
+}
+
+.form-label-group input::-ms-input-placeholder {
+    color: transparent;
+}
+
+.form-label-group input::-moz-placeholder {
+    color: transparent;
+}
+
+.form-label-group input::placeholder {
+    color: transparent;
+}
+
+.form-label-group input:not(:placeholder-shown) {
+    padding-top: calc(var(--input-padding-y) + var(--input-padding-y) * (2 / 3));
+    padding-bottom: calc(var(--input-padding-y) / 3);
+}
+
+.form-label-group input:not(:placeholder-shown)~label {
+    padding-top: calc(var(--input-padding-y) / 3);
+    padding-bottom: calc(var(--input-padding-y) / 3);
+    font-size: 12px;
+    color: #777;
+}
+
+/* Button style Code */
+.btn-signform{
+    font-size: 80%;
+    border-radius: 5rem;
+    letter-spacing: .1rem;
+    font-weight: bold;
+    padding: 1rem;
+    transition: all 0.2s;
+}
+.btn-signup {
+    background-color: purple;
+    color: #fff;
+}
+.btn-signup:hover {
+    background-color: #700070;
+    color: #fff;
+}
+/* Start Gradiant Border Code */
+.gradient-border {
+    --border-width: 4px;
+    border-radius: var(--border-width);
+}
+.gradient-border:after {
+    position: absolute;
+    content: "";
+    top: calc(-1 * var(--border-width));
+    left: calc(-1 * var(--border-width));
+    z-index: -1;
+    width: calc(100% + var(--border-width) * 2);
+    height: calc(100% + var(--border-width) * 2);
+    background: linear-gradient(
+            60deg,
+            hsl(224, 85%, 66%),
+            hsl(269, 85%, 66%),
+            hsl(314, 85%, 66%),
+            hsl(359, 85%, 66%),
+            hsl(44, 85%, 66%),
+            hsl(89, 85%, 66%),
+            hsl(134, 85%, 66%),
+            hsl(179, 85%, 66%)
+    );
+    background-size: 300% 300%;
+    background-position: 0 50%;
+    border-radius: calc(2 * var(--border-width));
+    animation: moveGradient 4s alternate infinite;
+}
+
+@keyframes moveGradient {
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+/* End of Gradiant Border Code */
