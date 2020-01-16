@@ -69,7 +69,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'wsgi.application'
+WSGI_APPLICATION = 'bcm.wsgi.application'
 
 
 # Database
@@ -127,8 +127,8 @@ STATIC_URL = '/static/'
 
 LOGIN_REDIRECT_URL = '/users/register/'
 LOGIN_URL = 'users:login'
-#LOGOUT_URL = 'users:login'
-#LOGOUT_REDIRECT_URL = 'users:login'
+# LOGOUT_URL = 'users:login'
+# LOGOUT_REDIRECT_URL = 'users:login'
 
 
 # Activate Django-Heroku.

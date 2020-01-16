@@ -1,7 +1,6 @@
-from django.contrib.auth import authenticate
 from django.shortcuts import render
-from django.contrib.auth.views import LoginView
-from users.forms import SignUpForm, LoginForm
+
+from users.forms import SignUpForm
 
 
 def register(request):
@@ -14,7 +13,6 @@ def register(request):
     else:
         form = SignUpForm()
     return render(request, 'users/signup.html', {'form': form})
-
 
 # def user_login(request):
 #     next_path = None
