@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'users.apps.UsersConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -38,7 +39,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'core.apps.CoreConfig',
-    'users.apps.UsersConfig',
 ]
 
 MIDDLEWARE = [
@@ -124,6 +124,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+LOGIN_REDIRECT_URL = '/users/register/'
+LOGIN_URL = 'users:login'
+#LOGOUT_URL = 'users:login'
+#LOGOUT_REDIRECT_URL = 'users:login'
 
 
 # Activate Django-Heroku.
